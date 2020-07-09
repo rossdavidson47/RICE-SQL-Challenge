@@ -17,11 +17,11 @@ CREATE TABLE employees   (
 	emp_no INT PRIMARY KEY,
 	emp_title_id VARCHAR(30),
 	FOREIGN KEY (emp_title_id) REFERENCES titles(title_id),
-	birth_date VARCHAR(30),
+	birth_date DATE,
 	first_name VARCHAR(30),
 	last_name VARCHAR(30),
 	sex VARCHAR(30),
-	hire_date VARCHAR(30)); 
+	hire_date DATE); 
 
 CREATE TABLE departments ( 
 	dept_no VARCHAR(30)PRIMARY KEY,
@@ -53,4 +53,11 @@ SELECT * FROM dept_manager;
 SELECT * FROM salaries;
 
 -- Used for data check
+select count(*) from titles;
+select count(*) from employees;
 select count(*) from departments;
+select count(*) from dept_emp;
+select count(*) from dept_manager;
+select count(*) from salaries;
+
+
