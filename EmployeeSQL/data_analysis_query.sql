@@ -46,3 +46,11 @@ FROM employees
 GROUP BY employees.last_name
 ORDER BY Frequency DESC;
 
+--BONUS
+-- Create a bar chart of average salary by title.
+SELECT titles.title, employees.emp_no, salaries.salary
+FROM employees
+LEFT JOIN titles
+ON employees.emp_title_id = titles.title_id
+LEFT JOIN salaries
+ON employees.emp_no = salaries.emp_no;
